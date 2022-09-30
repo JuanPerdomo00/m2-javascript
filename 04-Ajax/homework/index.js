@@ -3,7 +3,11 @@
 GET, PSOT, PUT, DELETE
 */
 
-let url = "http://127.0.0.1:5000/amigos/";
+//! Ocultar imagen de carga al comienzo.
+$("img").hide();
+
+//! URL de comunicacion a la API del servidor
+const url = "http://127.0.0.1:5000/amigos/";
 
 //! GET
 const botonVerAmigos = document.querySelector("#boton");
@@ -32,6 +36,8 @@ function reload() {
     });
   });
 }
+
+reload();
 
 //! GET FROM ID
 const botonBuscarAmigoPorId = document.querySelector("#search");
@@ -70,6 +76,8 @@ $(botonBuscarAmigoPorId).click(() => {
 
 //! delete
 
+$("#boton").click(reload);
+
 const deleteInput = document.querySelector("#inputDelete");
 const botonInputDelete = document.querySelector("#delete");
 const spanDeleteConfirmar = document.querySelector("#success");
@@ -80,10 +88,10 @@ $(botonInputDelete).click(() => {
   spanDeleteConfirmar.appendChild(h3);
   $.ajax({
     method: "DELETE",
-    url: url + numDelete,
+    url: `${url}${numDelete}`,
   }).done((data) => {
     // console.log(data);
-    h3.innerHTML = `Amigo eliminado`;
-    // reload();
+    h3.innerHTML = "Amigo eliminado";
+    reload();
   });
 });
