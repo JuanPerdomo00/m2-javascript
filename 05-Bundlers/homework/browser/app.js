@@ -1,15 +1,14 @@
 // var whiteboard = window.whiteboard;
-const { whiteboard } = require("./whiteboard");
-// var socket = window.io(window.location.origin);
-const socket = require("socket.io-client");
+import whiteboard from "./whiteboard";
+import io from "socket.io-client";
 
-const sockIo = socket.io(location.origin);
+var socket = io(window.location.origin);
 
-sockIo.on("connect", function () {
+socket.on("connect", function () {
   console.log("Connected!");
 });
 
-sockIo.on("load", function (strokes) {
+socket.on("load", function (strokes) {
   strokes.forEach(function (stroke) {
     var start = stroke.start;
     var end = stroke.end;
@@ -18,7 +17,7 @@ sockIo.on("load", function (strokes) {
   });
 });
 
-sockIo.on("draw", function (start, end, color) {
+socket.on("draw", function (start, end, color) {
   whiteboard.draw(start, end, color, false);
 });
 
