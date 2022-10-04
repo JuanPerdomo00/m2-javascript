@@ -1,0 +1,21 @@
+.divSearch {
+  display: inline-block;
+  /* background-color: black; */
+}
+
+.buttonSearch {
+  margin: 2px 4px;
+  color: palevioletred;
+  border: .1rem solid;
+  background-color: black;
+  border-radius: 6px;
+}
+
+.buttonSearch:hover {
+  border-radius: 1px;
+}
+
+.inputSearch {
+  border-radius: 10px;
+  background-color: darkgray;
+}
