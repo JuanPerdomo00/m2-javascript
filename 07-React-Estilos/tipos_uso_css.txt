@@ -1,0 +1,32 @@
+1. Legacy
+    import 'archivo.css' ---> aplicaba estilos de forma global
+    al definir estilos globales se nos podía pisar -> colisiones
+    vamos en contra de la filosofía de react ya que no estamos componentizando
+    si no trabajamos con el comando npx --> debemos configurar webpack de forma manual
+2. Inline Styling
+    no necesitamos config de webpack
+    perdemos los pseudoSlectores (hover, after, etc)
+    un atributo/prop llamada style al que le pasabamos un obj {key: value},
+    las props no pueden tener guiones, por lo que hay que usar camelCase
+    - const obj = {backgrgoundColor: green, color: white}
+    - <Producto style={obj}/>
+3. CSS Modules
+    junta lo mejor de los mundos, podemos definir estilos locales y globales
+    si no usamos npx ---> config webpack
+    si usamos npx ---> los archivos tienen extensión:
+    ---> .gcss : globales
+    ---> .modules.css : locales
+    import style from 'archivo.module.css'
+    -->style es un obj
+    style = {clases definidas en el css}
+    style.props
+    <h3 className={style.hola}>Holi</h3>
+    define un hash único para cada claser creada --> crean estilos locales y no se pisan
+4. Styled Components
+    un nuevo paradigma
+    generamos componente estilizados
+    no escribimos los tags/etiquetas ya que los definimos al crear los componentes estilizadoslos puedo exportar e importar y reutilizar
+    puedo generar estilos globaleslos invocamos como tags normales
+    <ComponenteEstilado>
+        Holissss
+    </ComponenteEstilado>
