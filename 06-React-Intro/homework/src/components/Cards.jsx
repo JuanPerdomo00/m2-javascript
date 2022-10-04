@@ -8,22 +8,16 @@ export default function Cards({ cities }) {
   // tip, podés usar un map
   return (
     <>
-      {cities.map((cites, index) => (
+      {cities.map((cities) => (
         <Card
-          key={index} //!No recomendado, no sabia que mas ponerle como key
-          name={cites.name}
-          max={cites.main.temp_max}
-          min={cites.main.temp_min}
-          img={cites.weather[0].icon}
-          onClose={() => alert(cites.name)}
+          key={cities.id}
+          name={cities.name}
+          max={cities.main.temp_max}
+          min={cities.main.temp_min}
+          img={cities.weather[0].icon}
+          onClose={() => alert(cities.name)}
         />
       ))}
     </>
   );
 }
-
-
-
-
-
-
