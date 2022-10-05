@@ -1,38 +1,47 @@
-.caja {
-  margin: 1rem 2rem;
-  padding: 2rem 3rem;
-  display: inline-block;
-  background-color: rgb(226, 221, 214);
-  border-radius: 3rem;
-  height: 20rem;
-  width: 20rem;
+:root {
+  --borderradius: 1rem;
+  --blanco: rgba(255, 255, 255, 0.664);
+  --rojo: rgba(255, 0, 0, 0.63);
 }
 
-
-.div {
+.caja {
+  border: 1px solid rgba(133, 132, 132, 0.562);
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  background-color: rgba(226, 221, 214, 0.822);
+  border-radius: var(--borderradius);
+  height: 15rem;
+  width: 17rem;
+  position: relative;
+}
+
+.divContent {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
 }
 
 .img {
   height: 5rem;
   width: 5rem;
+  background-color: rgba(0, 0, 0, 0.568);
+  border-radius: var(--borderradius);
 }
 
 .closeButon {
-  background-color: red;
-  color: aliceblue;
-  height: 3rem;
-  width: 3.4rem;
-  border: 1rem;
-  border-radius: 2rem;
+  background-color: var(--rojo);
+  color: var(--blanco);
+  height: 2.5rem;
+  width: 2.7rem;
+  right: var(--borderradius);
+  top: var(--borderradius);
+  border: none;
+  border-radius: var(--borderradius);
+  position: absolute;
 }
 
 .closeButon:hover {
   animation-delay: 1000ms;
-  color: tomato;
-  background-color: white;
-  
+  color: rgba(255, 99, 71, 0.89);
+  background-color: var(--blanco);
 }
-
-
