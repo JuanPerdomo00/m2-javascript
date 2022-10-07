@@ -1,1 +1,46 @@
 // Código de Nav acá
+
+// nav {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   ul {
+//     display: flex;
+//     li {
+//       list-style: none;
+//       a {
+//         text-decoration: none;
+//       }
+//     }
+//   }
+// }
+
+// .flex(@direction:row, @justify:center, @aling:center) {
+//   display: flex;
+//   flex-direction: @direction;
+//   justify-content: @justify;
+//   align-items: @aling;
+// }
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: @nav-bg;
+  border-bottom: 2px solid @nav-bg;
+
+  h2 {
+    margin: 3rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+
+    li {
+      margin-left: 2rem;
+    }
+  }
+
+}

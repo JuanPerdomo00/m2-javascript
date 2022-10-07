@@ -19,7 +19,9 @@ export default function Cards({cities, onClose}) {
     );
   } else {
     return(
-      <div>Sin ciudades</div>
+      <div>
+        <h1>Sin ciudades</h1>
+      </div>
     )
   }
 }

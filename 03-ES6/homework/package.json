@@ -1,0 +1,22 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "### Ejecutando los tests",
+  "main": "demo.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "nodemon demo.js",
+    "server": "http-server",
+    "t": "nodemon servidor.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.18.1",
+    "http-server": "^14.1.1",
+    "nodemon": "^2.0.20"
+  }
+}

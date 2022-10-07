@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Primer llamada a una api con jquery</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <button id="btn">GET</button>
+    <img id="img" src="" alt="Imagen" />
+    <script>
+      $("#btn").click(() => {
+        // $.get("https://jsonplaceholder.typicode.com/photos/1", (data) => {
+        //   $("#img").attr("src", data.url);
+        // });
+
+        //! Otra forma de hacerlo con ajax
+        $.ajax({
+          method: "GET",
+          url: "https://jsonplaceholder.typicode.com/photos/1",
+        }).done((data) => {
+          $("#img").attr("src", data.url);
+        }); //! => aqui es donde recibe el callbacks
+      });
+    </script>
+  </body>
+</html>

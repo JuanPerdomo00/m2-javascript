@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 import Logo from '../img/logoHenry.png'
 import SearchBar from './SearchBar.jsx';
 import './Nav.css';
@@ -14,6 +15,7 @@ function Nav({onSearch}) {
         <SearchBar
           onSearch={onSearch}
         />
+        <NavLink to="/">hola</NavLink>
     </nav>
   );
 };
