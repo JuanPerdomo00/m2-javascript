@@ -1,0 +1,7 @@
+.caja {
+  background-color: rgba(89, 86, 86, 0.752);
+}
+
+.caja_contenido {
+  display: flex;
+}
